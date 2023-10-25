@@ -1,0 +1,55 @@
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+} */
+
+:root {
+  /* --color-pink: #d88c9a; */
+  --color-dark: #121212;
+  --bg-color: #e0e5ec;
+  --hover-color: #ebeff6;
+  --light-shadow: rgba(255, 255, 255, 0.6);
+  --dark-shadow: #a3b1c6;
+  --default-padding: clamp(1rem, 2vw, 3rem);
+  --default-shadow: 9px 9px 16px 0px var(--dark-shadow),
+    -9px -9px 16px 0px var(--light-shadow);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* preloader  */
+.preloader {
+  --percentage: "Loading.. 0%";
+  background: var(--color-dark);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 11;
+}
+
+.preloader::before {
+  content: "loading..";
+  content: var(--percentage);
+  position: absolute;
+  right: var(--default-padding);
+  bottom: var(--default-padding);
+  color: var(--bg-color);
+  font-size: clamp(3rem, 8vw, 12rem);
+}
