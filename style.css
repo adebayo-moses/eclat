@@ -43,18 +43,16 @@
   right: var(--default-padding);
   bottom: var(--default-padding);
   color: var(--color-light);
-  font-size: clamp(1.5rem, 4vw, 6rem);
+  font-size: clamp(1.5rem, 2vw, 3rem);
 }
 
-#lottie-container {
+/* #lottie-container {
   position: absolute;
   top: 50%;
   left: 50%;
-  /* top: 100px;
-  left: 100px; */
   transform: translate(-50%, -50%);
   z-index: 10;
-}
+} */
 
 body {
   background-color: var(--bg-color);
@@ -62,4 +60,31 @@ body {
 
 h1 {
   color: var(--color-light);
+}
+
+#lottie-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+@media (max-width: 1200px) {
+  #lottie-container {
+    right: -15vw;
+  }
+}
+@media (max-width: 991px) {
+  #lottie-container {
+    right: -10vw;
+  }
+}
+@media (max-width: 767px) {
+  .lottie-container {
+    width: 150%;
+    right: 50%;
+    position: relative;
+  }
 }

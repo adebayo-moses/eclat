@@ -14,7 +14,7 @@ if (preloader) {
       onUpdate: () => {
         preloader.style.setProperty(
           "--percentage",
-          `'🧑🏿‍🍳 cooking: ${Math.floor(100 * tl.progress())}%'`
+          `'🧑🏿‍🍳 connecting plugs: ${Math.floor(100 * tl.progress())}%'`
         );
       },
     })
@@ -23,7 +23,7 @@ if (preloader) {
       pointerEvents: "none",
       duration: 0.7,
     })
-    .from(".page-header h1", {
+    .from(".page-header h1 lottie-container", {
       opacity: 0,
       y: 100,
     });
